@@ -1,0 +1,47 @@
+ install the dependent packages. Enter the following commands, one right after the other:
+
+cd ~/catkin_ws/src/
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+
+cd ~/catkin_ws && catkin_make
+
+TurtleBot3 has three models, Burger, Waffle, and Waffle Pi, so you have to set which model you want to use before you launch TurtleBot3. Type this command to open the bashrc file to add this setting:
+
+gedit ~/.bashrc
+
+Add this line at the bottom of the file:
+export TURTLEBOT3_MODEL=burger
+49-update-bash-settingsJPG
+
+Save the file and close it.
+
+Now reload .bashrc so that you do not have to log out and log back in.
+
+source ~/.bashr
+
+
+
+
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+
+Wait for Gazebo to load. It could take a while. Here is what your screen should look like:
+Let’s look at our TurtleBot3 in a different environment. This environment is often used for testing SLAM and navigation algorithms. Simultaneous localization and mapping (SLAM) concerns the problem of a robot building or updating a map of an unknown environment while simultaneously keeping track its location in that environment.
+
+In a new terminal window type:
+
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+
+roslaunch turtlebot3_gazebo turtlebot3_house.launch
+
+
+To move the TurtleBot with your keyboard, use this command in another terminal tab:
+
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+
+
