@@ -1,0 +1,48 @@
+CREATE TABLE delivery_person(
+	person_id int PRIMARY KEY,
+	person_name varchar(20)
+);
+
+CREATE TABLE clerical_staff(
+	cstaff_id int PRIMARY KEY,
+	cstaff_name varchar(20)
+);
+
+CREATE TABLE staff(
+	staff_id int PRIMARY KEY,
+	staff_name varchar(20),
+	room_no int,
+	person_id int REFERENCES delivery_person(person_id)
+);
+
+CREATE TABLE print_request(
+	request_id int PRIMARY KEY,
+	req_date date,
+	req_time time,
+	purpose varchar(50),
+	print_mode varchar(20),
+	color_print boolean,
+	paper_type varchar(10),
+	cost numeric(10,2),
+	staff_id int REFERENCES staff(staff_id),
+	person_id int REFERENCES delivery_person(person_id),
+	cstaff_id int REFERENCES clerical_staff(cstaff_id)
+);
+
+CREATE TABLE printer(
+	printer_id int PRIMARY KEY,
+	status varchar(20),
+	request_id int REFERENCES print_request(request_id)
+);
+
+CREATE TABLE person_number(
+	person_id int REFERENCES delivery_person(person_id),
+	person_no int,
+	PRIMARY KEY(person_id, person_no)
+);
+
+CREATE TABLE staff_number(
+	staff_id int REFERENCES staff(staff_id),
+	staff_no int,
+	PRIMARY KEY(staff_id, staff_no)
+);

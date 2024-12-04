@@ -1,0 +1,15 @@
+chair
+sofa
+table
+television
+remote
+dog
+dog-bowl
+
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="FhjzUfU1ZU03jZHGTsBP")
+project = rf.workspace("jacob-solawetz").project("microsoft-coco-subset")
+version = project.version(2)
+dataset = version.download("yolov8")

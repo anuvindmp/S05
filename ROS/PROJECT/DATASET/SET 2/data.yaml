@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['cat', 'dog']
+
+roboflow:
+  workspace: aiteamproject01-jl11a
+  project: pets-ajnuw
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aiteamproject01-jl11a/pets-ajnuw/dataset/5

@@ -1,0 +1,6 @@
+two ros services:
+llm agent core - understand natural language and replies/executes actions based on user query
+
+navigation - map and navigate surroundings
+
+object detection - self explanatory

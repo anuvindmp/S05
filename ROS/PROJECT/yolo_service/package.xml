@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>yolo_service</name>
+  <version>0.0.0</version>
+  <description>The yolo_service package</description>
+
+  <!-- Maintainer -->
+  <maintainer email="harish@todo.todo">harish</maintainer>
+
+  <!-- License -->
+  <license>TODO</license>
+
+  <!-- Build tool dependency -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+
+  <!-- Build export dependencies -->
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>std_srvs</build_export_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>requests</exec_depend>
+
+  <!-- Export tag -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
+

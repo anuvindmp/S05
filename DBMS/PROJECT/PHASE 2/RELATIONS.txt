@@ -1,0 +1,28 @@
+1. STAFF(STAFF_ID(PK), NAME, ROOM_NO, PERSON_ID(FK) )
+
+2. PRINT_REQUEST(REQUEST_ID(PK), DATE, TIME, PURPOSE, PRINT_MODE, COLOR_PRINT, PAPER_TYPE, COST, STAFF_ID(FK), PERSON_ID(FK), STAFF_ID(FK) )
+
+3. PRINTER(PRINTER_ID(PK), STATUS, REQUEST_ID(FK) )
+
+4. DELIVERY_PERSON(PERSON_ID(PK), NAME, )
+
+5. CLERICAL_STAFF(STAFF_ID(PK), NAME )
+
+6. PHONE_NO_DELIVERY_PERSON(PHONE_NO, PERSON_ID )
+
+7. PHONE_NO_STAFF(PHONE_NO, STAFF_ID )
+
+
+note : in 6 and 7 both the attributes together form the primary key and refers to PERSON_ID and STAFF_ID respectively.
+
+Name the attributes accordingly where there are similar attr.names (STAFF_ID in print request (check other names also in case i missed any) ).
+
+
+--------------------------------------------------------------------------
+=> add proper FK references, if you have any doubt ask me before you create the tables.I will send you pen and paper mapping with proper references drawn if you want
+=> write the code with proper intendations and stuff. DONT WRITE CREATE TABLE ..... ONE SINGLE LINE.(EACH ATTRIBUTE IN DIFFERENT LINE WITH PROPER INTENDATIONS). IF YOU FUCK UP AND THE CODE LOOKS UGLY IM GONNA TOUCH YOU INAPPROPRIATELY
+
+ALSO DONT WRITE EVERYTHING IN SMALL LETTERS. USE CAPITAL LETTERS <3
+
+
+SAVE THE TABLES PROPERLY AND SEPERATELY. DONOT KEEP IT IN THE SAME DB AS YOUR LABSHEETS.
