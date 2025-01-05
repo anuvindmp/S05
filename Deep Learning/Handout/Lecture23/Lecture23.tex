@@ -1,0 +1,107 @@
+\PassOptionsToClass{}{beamer}
+\documentclass[serif, aspectratio=169, handout]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,esint}
+\usepackage[british]{babel}
+\usetheme{Warsaw}
+\usecolortheme{rose}
+\usepackage{comment}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{ mathrsfs }
+\usepackage{gensymb}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{tkz-fct}  
+\usetikzlibrary{calc,arrows}
+% \usepackage[ruled]{algorithm2e}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{ragged2e}
+\usepackage{mwe}
+\usepackage{comment}
+\usepackage{tabstackengine}
+\setstackEOL{\cr}
+
+%%%%%% new packages added
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\def\BState{\State\hskip-\ALG@thistlm}
+
+\DeclareMathOperator*{\minimize}{minimize}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\makeatletter
+\newcommand\titlegraphicii[1]{\def\inserttitlegraphicii{#1}}
+\titlegraphicii{}
+\setbeamertemplate{title page}
+{
+  \vspace{0.3in}
+  \vbox{}
+
+  \begin{centering}
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}%\vskip0.5em
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+  \end{centering}
+  %\vfill
+}
+\makeatother
+
+\author{Mitesh M. Khapra}
+\title{CS7015 (Deep Learning) : Lecture 23}
+\subtitle{Generative Adversarial Networks (GANs)}
+\institute{Department of Computer Science and Engineering\\ Indian Institute of Technology Madras}
+\date{}
+%\titlegraphic{\includegraphics[height=1cm,width=2cm]{images/iitm_logo.png}}
+%\usepackage{unicode-math}
+%\setmathfont{XITS Math}
+%\setmathfont[version=setB,StylisticSet=1]{XITS Math}
+\usepackage{mathrsfs}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+  \include{utils/style}
+  \maketitle
+  \include{modules/Module1/Lecture23_1}
+  \include{modules/Module2/Lecture23_2}
+  \include{modules/Module3/Lecture23_3}
+  \include{modules/Module4/Lecture23_4}
+  \include{modules/Module5/Lecture23_5}
+\end{document}

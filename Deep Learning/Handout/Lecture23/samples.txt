@@ -1,0 +1,7 @@
+MNIST:
+https://kvmanohar22.github.io/Generative-Models/
+
+CIFAR10:
+PixelRNN: PixelRNN (2016)
+VAE (DRAW): Gregor, Karol, et al. (2015)
+GAN: Karras, Tero, et al. (2017)

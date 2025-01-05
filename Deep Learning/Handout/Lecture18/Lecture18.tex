@@ -1,0 +1,119 @@
+\PassOptionsToClass{}{beamer}
+\documentclass[serif,aspectratio=169,dvipsnames, handout]{beamer}
+\usepackage[utf8]{inputenc}
+
+%\StartShownPreambleCommands
+\usepackage{amsmath,esint}
+\usepackage{amssymb}
+\usepackage[british]{babel}
+\usepackage{multicol}
+\usetheme{Warsaw}
+\usecolortheme{rose}
+\usepackage[normalem]{ulem}
+%\usetheme{metropolis}
+%\usepackage{appendixnumberbeamer}
+
+%\StopShownPreambleCommands
+\usepackage{pgfplots}
+
+\usepackage{ mathrsfs }
+\usepackage{hyperref}
+
+\usepackage{gensymb}
+\usepackage{color}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{tkz-fct}  
+\usetikzlibrary{calc}
+\usepackage{ragged2e}
+\usepackage[ruled]{algorithm2e}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{adjustbox}
+\usepackage[labelformat=empty]{caption}
+\usepackage{blindtext}
+\usepackage{biblatex}
+
+
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows} 
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{intersections}
+
+
+\makeatletter
+
+\DeclareMathOperator*{\minimize}{minimize}
+
+\newcommand\myheading[1]{%
+\par\bigskip
+{\Large\bfseries#1}\par\smallskip}
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\setbeamertemplate{title page}
+{
+  \vspace{0.3in}
+  \vbox{}
+   %{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\hfill\inserttitlegraphicii\par}
+  \begin{centering}
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}%\vskip0.5em
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+  \end{centering}
+  %\vfill
+}
+\makeatother
+
+\author{Mitesh M. Khapra}
+\title{CS7015 (Deep Learning) : Lecture 18}
+\subtitle{Markov Networks}
+\institute{Department of Computer Science and Engineering\\ Indian Institute of Technology Madras}
+\date{}
+\titlegraphic{\includegraphics[height=1cm,width=2cm]{images/iitm_logo.png}}
+
+\begin{document}
+
+\maketitle
+
+\tikzstyle{input_neuron}=[circle,draw=red!50,fill=orange!10,thick,minimum size=1mm]
+\tikzstyle{hidden_neuron}=[circle,draw=blue!50,fill=blue!10,thick,minimum size=10mm]
+\tikzstyle{output_neuron}=[circle,draw=green!50,fill=green!20,thick,minimum size=4mm]
+
+\tikzstyle{input}=[circle,draw=black!50,fill=black!20,thick,minimum size=.2mm]
+\tikzstyle{neuron}=[circle,draw=blue!50,fill=blue!20,thick,minimum size=10mm]
+\tikzstyle{neuron1}=[circle,draw=blue!50,fill=cyan!10, thick,minimum size=10mm]
+
+\begin{frame}
+\begin{block}{Acknowledgments}
+	\begin{itemize}
+		\item Probabilistic Graphical models: Principles and Techniques, Daphne Koller and Nir Friedman
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\include{modules/Module1/Lecture18_1}
+\include{modules/Module2/Lecture18_2}
+\include{modules/Module3/Lecture18_3}
+
+\end{document}
